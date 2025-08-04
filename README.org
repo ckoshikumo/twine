@@ -1,0 +1,19 @@
+*Twine* is a very thin wrapper around threads stuff. For now, it only wraps SDL's threads (but maybe I'll expand it to include pthreads and/or C11's threads).
+
+Besides that, it provides a few simple init functions with error handling baked in.
+
+It does not have a implementation part, the entire thing is in the header (the functions are inline).
+
+It depends on *guard*, another one of my libs, so you have to include that. You also have to include SDL stuff (in case your paths are different or something). Like this:
+
+#+begin_src C 
+
+#include "../path/to/guard.h"
+#include <SDL3/SDL_atomic.h>
+#include <SDL3/SDL_mutex.h>
+
+#include "twine.h"
+
+#+end_src
+
+A real readme is forthcoming.
