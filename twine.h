@@ -13,6 +13,7 @@ typedef SDL_Condition twn_cond_s;
 
 #define twn_atomic_set SDL_SetAtomicInt
 #define twn_atomic_get SDL_GetAtomicInt
+#define twn_atomic_add SDL_AddAtomicInt
 #define twn_atomic_inc(a) SDL_AddAtomicInt(a, 1)
 #define twn_atomic_dec(a) SDL_AddAtomicInt(a, -1)
 #define twn_atomic_decref(a) (SDL_AddAtomicInt(a, -1) == 1)
